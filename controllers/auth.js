@@ -3,7 +3,6 @@ const User = require('../models/User');
 const ErrorResponse = require('../utils/errorResponse');
 const asyncHandler = require('../middleware/async');
 const sendEmail = require('../utils/sendEmail');
-const { match } = require('assert');
 
 // @desc      Register user
 // @route     POST /api/v1/auth/register

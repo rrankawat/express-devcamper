@@ -16,6 +16,7 @@ dotenv.config({ path: './config/config.env' });
 const errorHandler = require('./middleware/error');
 
 // Route files
+const users = require('./routes/users');
 const bootcamps = require('./routes/bootcamps');
 const courses = require('./routes/courses');
 const auth = require('./routes/auth');
@@ -44,6 +45,7 @@ app.get('/', (req, res) => {
 });
 
 // Mount routers
+app.use('/api/v1/users', users);
 app.use('/api/v1/bootcamps', bootcamps);
 app.use('/api/v1/courses', courses);
 app.use('/api/v1/auth', auth);
