@@ -6,9 +6,11 @@ const { protect, authorize } = require('../middleware/auth');
 
 // Include other resource routers
 const couresRouter = require('./courses');
+const reviewRouter = require('./reviews');
 
 // Re-route into other resource routers
 router.use('/:bootcampId/courses', couresRouter);
+router.use('/:bootcampId/reviews', reviewRouter);
 
 // Advanced Filtering
 const advancedFilters = require('../middleware/advancedFilters');
